@@ -5,7 +5,7 @@ import com.github.humbergroup.state.State;
 
 public class Hero implements Observer {
 
-    private String name;
+    private final String name;
 
     private int hp;
 
@@ -27,19 +27,22 @@ public class Hero implements Observer {
 
     @Override
     public void update(String message) {
-
+        System.out.printf("Hero %s receive message: %s\n", this.name, message);
     }
 
     public void render() {
-        System.out.println("do something");
+        System.out.printf("Hero: %s with %d/%d (%.2f) hp, %d defence, %d attack\n",
+                this.name, this.restHp, this.hp, this.getHpPercent(), this.defence, this.attack);
     }
 
     public void beAttack(int hp) {
-
+        this.restHp -= hp;
     }
 
     public void increaseHp(int hp) {
-        this.hp += 1;
+        double percent = getHpPercent();
+        this.hp += hp;
+        this.restHp = (int) (this.hp * percent);
     }
 
     public void increaseDefence(int defence) {

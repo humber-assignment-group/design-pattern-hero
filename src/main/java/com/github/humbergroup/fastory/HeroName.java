@@ -1,4 +1,4 @@
-package com.github.humbergroup;
+package com.github.humbergroup.fastory;
 
 public enum HeroName {
 

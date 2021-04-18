@@ -1,4 +1,6 @@
-package com.github.humbergroup;
+package com.github.humbergroup.fastory;
+
+import com.github.humbergroup.Hero;
 
 public class HeroFactory {
 

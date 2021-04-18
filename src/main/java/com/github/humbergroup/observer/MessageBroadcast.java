@@ -1,4 +1,4 @@
-package com.github.humbergroup;
+package com.github.humbergroup.observer;
 
 import com.github.humbergroup.observer.Observer;
 import com.github.humbergroup.observer.Subject;
