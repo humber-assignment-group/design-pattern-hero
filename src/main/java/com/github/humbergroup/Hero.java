@@ -15,6 +15,7 @@ public class Hero {
         this.hp = hp;
         this.defence = defence;
         this.attack = attack;
+        //test2
     }
 
     // testing git hub by Ji
