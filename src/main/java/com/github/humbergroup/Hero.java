@@ -15,5 +15,6 @@ public class Hero {
         this.hp = hp;
         this.defence = defence;
         this.attack = attack;
+        //test2
     }
 }
