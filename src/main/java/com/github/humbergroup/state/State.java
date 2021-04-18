@@ -21,7 +21,7 @@ public abstract class State {
         return new DeathState(context);
     }
 
-    private void transitionState(){
+    protected void transitionState(){
         double hp = context.getHpPercent();
         if (hp > 10 && !(this instanceof NormalState)){
             context.setState(new NormalState(context));
