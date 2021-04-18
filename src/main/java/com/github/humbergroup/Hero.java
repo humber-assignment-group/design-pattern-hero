@@ -24,6 +24,8 @@ public class Hero implements Observer, Role {
         this.restHp = hp;
         this.defence = defence;
         this.attack = attack;
+        this.state = State.InitialState(this);
+
     }
 
     @Override
