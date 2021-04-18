@@ -10,6 +10,7 @@ public abstract class HeroDecorator implements Role {
 	public HeroDecorator (Hero hero) {
 		this.hero = hero;
 	}
+	//testing
 	
 	public void render() {
 		
