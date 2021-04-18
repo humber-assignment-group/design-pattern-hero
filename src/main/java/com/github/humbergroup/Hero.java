@@ -48,7 +48,7 @@ public class Hero implements Observer, Role {
         this.restHp = (int) (this.hp * percent);
     }
 
-    public void reduceRestHp(int hp){
+    public void reduceRestHp(int hp) {
         this.restHp = Math.max(this.restHp - hp, 0);
     }
 
