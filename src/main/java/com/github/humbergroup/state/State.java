@@ -5,7 +5,7 @@ import com.github.humbergroup.Hero;
 
 public abstract class State {
 
-    private final Hero context;
+    public final Hero context;
 
     public State(Hero context){
         this.context = context;
