@@ -8,6 +8,6 @@ public class CrazyState extends State{
 
     @Override
     void beAttacked(int hp) {
-
+        System.out.println("Hero hp below 10%");
     }
 }
