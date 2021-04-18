@@ -8,6 +8,6 @@ public class NormalState extends State {
 
     @Override
     void beAttacked(int hp) {
-
+        System.out.println("Hero condition normal");
     }
 }
