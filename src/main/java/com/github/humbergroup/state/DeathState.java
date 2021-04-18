@@ -8,6 +8,6 @@ public class DeathState extends State{
 
     @Override
     void beAttacked(int hp) {
-
+        System.out.println("Hero is dead");
     }
 }
