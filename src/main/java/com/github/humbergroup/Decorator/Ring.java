@@ -9,12 +9,13 @@ public class Ring extends HeroDecorator{
         hero.increaseHp(10);
     }
 
+    @Override
     public void render() {
-
+        hero.render();
     }
 
     @Override
     public void beAttack(int hp) {
-
+        hero.beAttack(hp);
     }
 }
