@@ -67,7 +67,7 @@ public class Hero implements Observer, Role {
     }
 
     public double getHpPercent() {
-        return hp * 1.0 / restHp;
+        return restHp / (double)hp * 100;
     }
 
     public int getHp() {
