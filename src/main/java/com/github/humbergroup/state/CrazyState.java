@@ -8,7 +8,7 @@ public class CrazyState extends State{
 
     @Override
     void beAttacked(int hp) {
-        context.reduceRestHp(hp);
+        context.beAttack(hp);
         transitionState();
     }
 }
