@@ -5,12 +5,12 @@ import com.github.humbergroup.Hero;
 public abstract class HeroDecorator implements Role {
 	
 	Hero hero;
-	
+
 	public HeroDecorator (Hero hero) {
 		this.hero = hero;
 	}
-	//testing
-	
+
+
 	public void render() {
 		
 	}
