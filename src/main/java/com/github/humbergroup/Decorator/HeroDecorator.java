@@ -4,7 +4,7 @@ import com.github.humbergroup.Hero;
 
 public abstract class HeroDecorator implements Role {
 	
-	Hero hero;
+	protected Hero hero;
 
 	public HeroDecorator (Hero hero) {
 		this.hero = hero;
@@ -12,11 +12,11 @@ public abstract class HeroDecorator implements Role {
 
 
 	public void render() {
-		
+		hero.render();
 	}
 	
 	public void beAttacked(int hp) {
-		
+		hero.beAttack(hp);
 	}
 
 }
