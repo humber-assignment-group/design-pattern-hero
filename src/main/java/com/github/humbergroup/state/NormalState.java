@@ -2,19 +2,12 @@ package com.github.humbergroup.state;
 
 import com.github.humbergroup.Hero;
 
-public class NormalState implements State {
+public class NormalState extends State {
 
-    private static NormalState instance = new NormalState();
-
-    private NormalState(){}
-
-    public static NormalState instance(){
-        return instance;
-    }
+    public NormalState(Hero hero){ super(hero);}
 
     @Override
-    public void updateState(Hero hero){
-        System.out.println("Hero at normal state");
-        hero.setState(NormalState.instance());
+    void beAttacked(int hp) {
+
     }
 }
