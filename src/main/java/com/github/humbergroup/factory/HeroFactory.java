@@ -1,4 +1,4 @@
-package com.github.humbergroup.fastory;
+package com.github.humbergroup.factory;
 
 import com.github.humbergroup.Hero;
 

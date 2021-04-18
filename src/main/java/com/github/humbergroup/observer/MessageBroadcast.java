@@ -1,8 +1,5 @@
 package com.github.humbergroup.observer;
 
-import com.github.humbergroup.observer.Observer;
-import com.github.humbergroup.observer.Subject;
-
 import java.util.List;
 
 public class MessageBroadcast implements Subject {
