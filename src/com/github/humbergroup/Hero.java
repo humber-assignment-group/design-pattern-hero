@@ -1,6 +1,7 @@
 package com.github.humbergroup;
 
 import com.github.humbergroup.observer.Observer;
+import com.github.humbergroup.state.State;
 
 public class Hero implements Observer {
 
@@ -13,6 +14,8 @@ public class Hero implements Observer {
     private int defence;
 
     private int attack;
+
+    private State state;
 
     public Hero(String name, int hp, int defence, int attack) {
         this.name = name;
@@ -72,5 +75,9 @@ public class Hero implements Observer {
 
     public int getAttack() {
         return attack;
+    }
+
+    public void setState(State state){
+        this.state = state;
     }
 }
