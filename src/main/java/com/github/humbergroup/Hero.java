@@ -3,7 +3,7 @@ package com.github.humbergroup;
 import com.github.humbergroup.observer.Observer;
 import com.github.humbergroup.state.State;
 
-public class Hero implements Observer {
+public class Hero implements Observer, Role {
 
     private final String name;
 
@@ -30,11 +30,13 @@ public class Hero implements Observer {
         System.out.printf("Hero %s receive message: %s\n", this.name, message);
     }
 
+    @Override
     public void render() {
         System.out.printf("Hero: %s with %d/%d (%.2f) hp, %d defence, %d attack\n",
                 this.name, this.restHp, this.hp, this.getHpPercent(), this.defence, this.attack);
     }
 
+    @Override
     public void beAttack(int hp) {
         this.restHp -= hp;
     }
@@ -77,7 +79,7 @@ public class Hero implements Observer {
         return attack;
     }
 
-    public void setState(State state){
+    public void setState(State state) {
         this.state = state;
     }
 }
