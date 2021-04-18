@@ -16,4 +16,6 @@ public class Hero {
         this.defence = defence;
         this.attack = attack;
     }
+
+    // testing git hub by Ji
 }
