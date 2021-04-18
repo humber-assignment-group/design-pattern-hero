@@ -1,4 +1,4 @@
-package com.github.humbergroup;
+package com.github.humbergroup.Decorator;
 
 public interface Role {
 	

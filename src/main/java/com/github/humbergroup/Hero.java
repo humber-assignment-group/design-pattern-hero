@@ -1,5 +1,6 @@
 package com.github.humbergroup;
 
+import com.github.humbergroup.Decorator.Role;
 import com.github.humbergroup.observer.Observer;
 import com.github.humbergroup.state.State;
 

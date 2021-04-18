@@ -1,7 +1,6 @@
 package com.github.humbergroup.Decorator;
 
 import com.github.humbergroup.Hero;
-import com.github.humbergroup.Role;
 
 public abstract class HeroDecorator implements Role {
 	
