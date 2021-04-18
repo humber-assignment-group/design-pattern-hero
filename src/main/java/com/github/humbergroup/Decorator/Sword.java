@@ -13,6 +13,7 @@ public class Sword extends HeroDecorator{
     @Override
     public void render() {
         hero.render();
+        System.out.println("Hero equipped with Sword");
     }
 
     @Override
