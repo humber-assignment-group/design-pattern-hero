@@ -2,19 +2,12 @@ package com.github.humbergroup.state;
 
 import com.github.humbergroup.Hero;
 
-public class DeathState implements State{
+public class DeathState extends State{
 
-    private static DeathState instance = new DeathState();
-
-    private DeathState(){}
-
-    public static DeathState instance(){
-        return instance;
-    }
+    public DeathState(Hero hero){ super(hero);}
 
     @Override
-    public void updateState(Hero hero){
-        System.out.println("Hero at death state");
-        hero.setState(DeathState.instance());
+    void beAttacked(int hp) {
+
     }
 }
