@@ -34,8 +34,12 @@ public class Hero implements Observer, Role {
 
     @Override
     public void render() {
-        System.out.printf("Hero: %s with %d/%d (%.2f%%) hp, %d defence, %d attack\n",
-                this.name, this.restHp, this.hp, this.getHpPercent(), this.defence, this.attack);
+        System.out.printf("Hero: %s with" +
+                        "\n\t%d/%d (%.2f%%) hp" +
+                        "\n\t%d defence" +
+                        "\n\t%d attack" +
+                        "\n\t%s\n",
+                this.name, this.restHp, this.hp, this.getHpPercent(), this.defence, this.attack, this.state.getClass().getSimpleName());
     }
 
     @Override
@@ -43,22 +47,25 @@ public class Hero implements Observer, Role {
         state.beAttacked(hp);
     }
 
+    @Override
     public void increaseHp(int hp) {
         double percent = getHpPercent();
         this.hp += hp;
         this.restHp = ((int) (this.hp * percent));
     }
 
-    public void reduceRestHp(int hp) {
-        this.restHp = Math.max(this.restHp - hp, 0);
-    }
-
+    @Override
     public void increaseDefence(int defence) {
         this.defence += defence;
     }
 
+    @Override
     public void increaseAttack(int attack) {
         this.attack += attack;
+    }
+
+    public void reduceRestHp(int hp) {
+        this.restHp = Math.max(this.restHp - hp, 0);
     }
 
     public String getName() {
@@ -66,10 +73,12 @@ public class Hero implements Observer, Role {
     }
 
     public double getHpPercent() {
-        return restHp / (double)hp * 100;
+        return restHp / (double) hp * 100;
     }
 
-    public int getHp() {return hp;}
+    public int getHp() {
+        return hp;
+    }
 
     public int getRestHp() {
         return restHp;

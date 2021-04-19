@@ -4,7 +4,7 @@ import com.github.humbergroup.Hero;
 
 public class Ring extends HeroDecorator{
 
-    public Ring (Hero hero){
+    public Ring (Role hero){
         super(hero);
         hero.increaseDefence(10);
     }

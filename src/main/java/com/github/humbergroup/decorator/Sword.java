@@ -2,9 +2,9 @@ package com.github.humbergroup.decorator;
 
 import com.github.humbergroup.Hero;
 
-public class Sword extends HeroDecorator{
+public class Sword extends HeroDecorator {
 
-    public Sword (Hero hero){
+    public Sword(Role hero) {
         super(hero);
         hero.increaseDefence(2);
         hero.increaseAttack(10);

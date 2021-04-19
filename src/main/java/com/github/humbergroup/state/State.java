@@ -23,7 +23,6 @@ public abstract class State {
 
     protected void transitionState() {
         double hp = context.getHpPercent();
-        System.out.println(hp);
         if (hp > 10 && !(this instanceof NormalState)) {
             context.setState(new NormalState(context));
         } else if (0 < hp && hp <= 10 && !(this instanceof CrazyState)) {
