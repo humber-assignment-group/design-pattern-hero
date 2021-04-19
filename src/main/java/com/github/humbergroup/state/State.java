@@ -7,31 +7,32 @@ public abstract class State {
 
     public final Hero context;
 
-    public State(Hero context){
+    public State(Hero context) {
         this.context = context;
     }
 
-    public static State InitialState(Hero context){
+    public static State InitialState(Hero context) {
         double hp = context.getHpPercent();
-        if (hp > 10){
+        if (hp > 10) {
             return new NormalState(context);
-        } else if (0 < hp){
+        } else if (0 < hp) {
             return new CrazyState(context);
         }
         return new DeathState(context);
     }
 
-    protected void transitionState(){
+    protected void transitionState() {
         double hp = context.getHpPercent();
-        if (hp > 10 && !(this instanceof NormalState)){
+        System.out.println(hp);
+        if (hp > 10 && !(this instanceof NormalState)) {
             context.setState(new NormalState(context));
-        } else if (0 < hp && !(this instanceof CrazyState)){
+        } else if (0 < hp && hp <= 10 && !(this instanceof CrazyState)) {
             context.setState(new CrazyState(context));
-        } else if (hp <= 0 && !(this instanceof DeathState)){
+        } else if (hp <= 0 && !(this instanceof DeathState)) {
             context.setState(new DeathState(context));
         }
     }
 
-    abstract void beAttacked(int hp);
+    public abstract void beAttacked(int hp);
 
 }

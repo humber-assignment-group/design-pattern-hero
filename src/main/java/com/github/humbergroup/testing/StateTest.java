@@ -15,7 +15,7 @@ class StateTest {
     @Test
     void normalStateTest() {
         Hero hero = new Hero("tester", 100, 1, 10);
-        hero.reduceRestHp(40);
+        hero.beAttack(40);
         assertEquals(60, hero.getRestHp());
         assertTrue(hero.getState() instanceof NormalState);
     }
@@ -23,7 +23,7 @@ class StateTest {
     @Test
     void crazyStateTest() {
         Hero hero = new Hero("tester", 100, 1, 10);
-        hero.reduceRestHp(95);
+        hero.beAttack(95);
         assertEquals(5, hero.getRestHp());
         assertTrue(hero.getState() instanceof CrazyState);
     }
@@ -31,8 +31,9 @@ class StateTest {
     @Test
     void deathStateTest() {
         Hero hero = new Hero("tester", 100, 1, 10);
-        hero.reduceRestHp(100);
+        hero.beAttack(100);
         assertEquals(0, hero.getRestHp());
+        System.out.println(hero.getState());
         assertTrue(hero.getState() instanceof DeathState);
     }
 }

@@ -7,7 +7,7 @@ public class NormalState extends State {
     public NormalState(Hero hero){ super(hero);}
 
     @Override
-    void beAttacked(int hp) {
+    public  void beAttacked(int hp) {
         context.reduceRestHp(hp);
         transitionState();
     }
