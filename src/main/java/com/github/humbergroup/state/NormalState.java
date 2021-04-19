@@ -8,7 +8,7 @@ public class NormalState extends State {
 
     @Override
     void beAttacked(int hp) {
-        context.beAttack(hp);
+        context.reduceRestHp(hp);
         transitionState();
     }
 }
