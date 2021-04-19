@@ -2,9 +2,9 @@ package com.github.humbergroup.decorator;
 
 import com.github.humbergroup.Hero;
 
-public class Ring extends HeroDecorator{
+public class Ring extends HeroDecorator {
 
-    public Ring (Role hero){
+    public Ring(Role hero) {
         super(hero);
         hero.increaseDefence(10);
     }

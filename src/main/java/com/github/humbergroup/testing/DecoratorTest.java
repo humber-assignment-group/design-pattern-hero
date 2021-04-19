@@ -21,5 +21,11 @@ public class DecoratorTest {
         assertEquals(7, heroS.getDefence());
         assertEquals(15, heroS.getAttack());
 
+        Hero heroSR = new Hero("Sword",5,5,5);
+        Sword hero3 = new Sword(new Ring(heroSR));
+        hero3.render();
+        assertEquals(17, heroSR.getDefence());
+        assertEquals(15, heroSR.getAttack());
+
     }
 }
