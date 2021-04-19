@@ -7,7 +7,7 @@ public class DeathState extends State{
     public DeathState(Hero hero){ super(hero);}
 
     @Override
-    public void beAttacked(int hp) {
+    void beAttacked(int hp) {
         context.reduceRestHp(hp);
         transitionState();
     }

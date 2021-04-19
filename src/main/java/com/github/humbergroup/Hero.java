@@ -40,7 +40,7 @@ public class Hero implements Observer, Role {
 
     @Override
     public void beAttack(int hp) {
-        state.beAttacked(hp);
+        this.restHp -= hp;
     }
 
     public void increaseHp(int hp) {
