@@ -1,4 +1,4 @@
-package com.github.humbergroup.Decorator;
+package com.github.humbergroup.decorator;
 
 import com.github.humbergroup.Hero;
 
@@ -14,10 +14,5 @@ public class Sword extends HeroDecorator{
     public void render() {
         System.out.println("Hero equipped with Sword");
         hero.render();
-    }
-
-    @Override
-    public void beAttack(int hp) {
-        hero.beAttack(hp);
     }
 }

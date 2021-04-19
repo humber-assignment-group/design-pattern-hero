@@ -1,4 +1,4 @@
-package com.github.humbergroup.Decorator;
+package com.github.humbergroup.decorator;
 
 import com.github.humbergroup.Hero;
 
@@ -13,10 +13,5 @@ public class Ring extends HeroDecorator{
     public void render() {
         System.out.println("Hero equipped with ring");
         hero.render();
-    }
-
-    @Override
-    public void beAttack(int hp) {
-        hero.beAttack(hp);
     }
 }

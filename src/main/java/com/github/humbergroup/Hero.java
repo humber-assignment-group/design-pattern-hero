@@ -1,6 +1,6 @@
 package com.github.humbergroup;
 
-import com.github.humbergroup.Decorator.Role;
+import com.github.humbergroup.decorator.Role;
 import com.github.humbergroup.observer.Observer;
 import com.github.humbergroup.state.State;
 
@@ -39,7 +39,7 @@ public class Hero implements Observer, Role {
     }
 
     @Override
-    public void beAttack(int hp) {
+    public void beAttacked(int hp) {
         state.beAttacked(hp);
     }
 
