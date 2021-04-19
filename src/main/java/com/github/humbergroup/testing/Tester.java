@@ -1,7 +1,8 @@
-package com.github.humbergroup;
+package com.github.humbergroup.testing;
 
 import com.github.humbergroup.Decorator.Ring;
 import com.github.humbergroup.Decorator.Sword;
+import com.github.humbergroup.Hero;
 import org.junit.jupiter.api.Test;
 
 public class Tester {
