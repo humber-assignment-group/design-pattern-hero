@@ -17,6 +17,7 @@ class StateTest {
         Hero hero = new Hero("tester", 100, 1, 10);
         hero.beAttack(40);
         assertEquals(60, hero.getRestHp());
+        System.out.println(hero.getState());
         assertTrue(hero.getState() instanceof NormalState);
     }
 
