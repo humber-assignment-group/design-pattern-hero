@@ -3,7 +3,7 @@ package com.github.humbergroup.Decorator;
 import com.github.humbergroup.Hero;
 
 public abstract class HeroDecorator implements Role {
-	
+
 	protected Hero hero;
 
 	public HeroDecorator (Hero hero) {
@@ -18,5 +18,6 @@ public abstract class HeroDecorator implements Role {
 	public void beAttacked(int hp) {
 		hero.beAttack(hp);
 	}
+
 
 }
