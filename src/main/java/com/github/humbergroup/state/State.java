@@ -15,7 +15,7 @@ public abstract class State {
         double hp = context.getHpPercent();
         if (hp > 10){
             return new NormalState(context);
-        } else if (0 < hp && hp < 10){
+        } else if (0 < hp){
             return new CrazyState(context);
         }
         return new DeathState(context);
