@@ -1,16 +1,18 @@
-package com.github.humbergroup;
+package com.github.humbergroup.testing;
 
 import com.github.humbergroup.Hero;
 import com.github.humbergroup.state.CrazyState;
 import com.github.humbergroup.state.DeathState;
 import com.github.humbergroup.state.NormalState;
-import com.github.humbergroup.state.State;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 class StateTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void normalStateTest() {
         Hero hero = new Hero("tester", 100, 1, 10);
         hero.beAttack(40);
@@ -18,7 +20,7 @@ class StateTest {
         assertTrue(hero.getState() instanceof NormalState);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void crazyStateTest() {
         Hero hero = new Hero("tester", 100, 1, 10);
         hero.beAttack(95);
@@ -26,7 +28,7 @@ class StateTest {
         assertTrue(hero.getState() instanceof CrazyState);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void deathStateTest() {
         Hero hero = new Hero("tester", 100, 1, 10);
         hero.beAttack(100);
