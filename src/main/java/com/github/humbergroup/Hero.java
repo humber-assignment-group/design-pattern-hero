@@ -46,7 +46,7 @@ public class Hero implements Observer, Role {
     public void increaseHp(int hp) {
         double percent = getHpPercent();
         this.hp += hp;
-        this.restHp = (int) (this.hp * percent);
+        this.restHp = ((int) (this.hp * percent));
     }
 
     public void reduceRestHp(int hp) {
