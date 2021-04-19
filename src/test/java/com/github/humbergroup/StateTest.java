@@ -1,4 +1,4 @@
-package test;
+package com.github.humbergroup;
 
 import com.github.humbergroup.Hero;
 import com.github.humbergroup.state.CrazyState;
