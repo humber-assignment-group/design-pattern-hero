@@ -24,6 +24,8 @@ public class Hero implements Observer, Role {
         this.restHp = hp;
         this.defence = defence;
         this.attack = attack;
+        this.state = State.InitialState(this);
+
     }
 
     @Override
@@ -65,7 +67,7 @@ public class Hero implements Observer, Role {
     }
 
     public double getHpPercent() {
-        return hp * 1.0 / restHp;
+        return restHp / (double)hp * 100;
     }
 
     public int getHp() {
@@ -86,5 +88,9 @@ public class Hero implements Observer, Role {
 
     public void setState(State state) {
         this.state = state;
+    }
+
+    public State getState() {
+        return state;
     }
 }
