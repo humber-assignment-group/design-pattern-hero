@@ -11,9 +11,11 @@ public class Tester {
     public void tester(){
         Hero hero = new Hero("Sandeep", 5,5,5);
         Ring heroR = new Ring(hero);
-        Sword heroS = new Sword(hero);
         heroR.render();
 
-        heroS.render();
+        Hero heroS = new Hero("Sword",5,5,5);
+        Sword hero2 = new Sword(heroS);
+        hero2.render();
+
     }
 }

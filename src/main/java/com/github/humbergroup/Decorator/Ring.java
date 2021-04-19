@@ -6,13 +6,13 @@ public class Ring extends HeroDecorator{
 
     public Ring (Hero hero){
         super(hero);
-        hero.increaseHp(10);
+        hero.increaseDefence(10);
     }
 
     @Override
     public void render() {
-        hero.render();
         System.out.println("Hero equipped with ring");
+        hero.render();
     }
 
     @Override

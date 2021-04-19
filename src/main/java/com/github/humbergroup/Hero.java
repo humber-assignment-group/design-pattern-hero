@@ -34,7 +34,7 @@ public class Hero implements Observer, Role {
 
     @Override
     public void render() {
-        System.out.printf("Hero: %s with %d/%d (%.2f) hp, %d defence, %d attack\n",
+        System.out.printf("Hero: %s with %d/%d (%.2f%%) hp, %d defence, %d attack\n",
                 this.name, this.restHp, this.hp, this.getHpPercent(), this.defence, this.attack);
     }
 
