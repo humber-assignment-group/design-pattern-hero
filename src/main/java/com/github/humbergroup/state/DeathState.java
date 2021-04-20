@@ -8,6 +8,7 @@ public class DeathState extends State{
 
     @Override
     public void beAttacked(int hp) {
+        System.out.println("I am died now");
         context.reduceRestHp(hp);
         transitionState();
     }
