@@ -11,16 +11,25 @@ public abstract class State {
         this.context = context;
     }
 
+    /**
+     * initial state based on context's hp percent.
+     *
+     * @param context hero
+     * @return the associated state
+     */
     public static State InitialState(Hero context) {
         double hp = context.getHpPercent();
         if (hp > 10) {
             return new NormalState(context);
-        } else if (0 < hp) {
+        } else if (0 < hp && hp <= 10) {
             return new CrazyState(context);
         }
         return new DeathState(context);
     }
 
+    /**
+     * transit state after be attacked
+     */
     protected void transitionState() {
         double hp = context.getHpPercent();
         if (hp > 10 && !(this instanceof NormalState)) {

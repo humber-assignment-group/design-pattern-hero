@@ -18,12 +18,13 @@ public class Hero implements Observer, Role {
 
     private State state;
 
-    public Hero(String name, int hp, int defence, int attack) {
+    protected Hero(String name, int hp, int defence, int attack) {
         this.name = name;
         this.hp = hp;
         this.restHp = hp;
         this.defence = defence;
         this.attack = attack;
+        // initial default state based on the current hp percent
         this.state = State.InitialState(this);
     }
 
@@ -49,6 +50,7 @@ public class Hero implements Observer, Role {
 
     @Override
     public void increaseHp(int hp) {
+        // while increase extra hp, should keep the restHp increasing the relative value.
         double percent = getHpPercent();
         this.hp += hp;
         this.restHp = ((int) (this.hp * percent));
@@ -65,6 +67,7 @@ public class Hero implements Observer, Role {
     }
 
     public void reduceRestHp(int hp) {
+        // to check whether restHp is zero after reducing
         this.restHp = Math.max(this.restHp - hp, 0);
     }
 

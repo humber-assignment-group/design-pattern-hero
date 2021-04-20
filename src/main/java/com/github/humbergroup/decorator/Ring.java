@@ -1,7 +1,8 @@
 package com.github.humbergroup.decorator;
 
-import com.github.humbergroup.Hero;
-
+/**
+ * Ring can give role 10 extra defence
+ */
 public class Ring extends HeroDecorator {
 
     public Ring(Role hero) {

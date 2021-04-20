@@ -1,7 +1,8 @@
 package com.github.humbergroup.decorator;
 
-import com.github.humbergroup.Hero;
-
+/**
+ * Sword can give role 2 extra defence and 10 extra attack
+ */
 public class Sword extends HeroDecorator {
 
     public Sword(Role hero) {

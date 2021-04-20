@@ -1,5 +1,10 @@
 package com.github.humbergroup.factory;
 
+/**
+ * HeroName includes all heroes in Game with the predefined hp, defence, attack.
+ *
+ * @author faris
+ */
 public enum HeroName {
 
     Aatrox(1000, 10, 20),
@@ -16,7 +21,7 @@ public enum HeroName {
 
     private final int attack;
 
-    private HeroName(int hp, int defence, int attack) {
+    HeroName(int hp, int defence, int attack) {
         this.hp = hp;
         this.defence = defence;
         this.attack = attack;
