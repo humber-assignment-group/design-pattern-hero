@@ -18,7 +18,7 @@ public class Hero implements Observer, Role {
 
     private State state;
 
-    protected Hero(String name, int hp, int defence, int attack) {
+    public Hero(String name, int hp, int defence, int attack) {
         this.name = name;
         this.hp = hp;
         this.restHp = hp;
